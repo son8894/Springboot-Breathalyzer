@@ -17,9 +17,9 @@ import com.example.demo.user.service.UserProfileMapper;
 @RestController
 public class UserProfileController {
 
-	private UserProfileMapper mapper;
+	public UserProfileMapper mapper;
 	
-	private UserProfileController(UserProfileMapper mapper) {
+	public UserProfileController(UserProfileMapper mapper) {
 		this.mapper = mapper;
 	}
 	
