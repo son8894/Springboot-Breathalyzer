@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.user.service.UserProfileMapper;
 
-@CrossOrigin(origin="*", allowedHeaders = "*")
 @RestController
+@CrossOrigin(origin="*", allowedHeaders = "*")
 public class UserProfileController {
 
 	private UserProfileMapper mapper;
