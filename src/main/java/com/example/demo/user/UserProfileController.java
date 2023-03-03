@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.user.service.UserProfileMapper;
 
-@CrossOrigin(origins = {"https://port-0-breathalyzer-r8xoo2mlel9na1x.sel3.cloudtype.app/"})
+@CrossOrigin(origins = {"*"})
 @RestController
 public class UserProfileController {
 
