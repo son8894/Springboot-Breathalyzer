@@ -50,7 +50,7 @@ public class UserProfileController {
 		mapper.deleteUserProfile(id);
 	}
 	/*
-	@PostMapping("/login/{id}")
+	@PostMapping("/user/login/{id}")
 	public boolean login(@PathVariable("id") int id, @RequestParam("userId") String userId, @RequestParam("password") String password) {
 	UserProfile user = mapper.getUserProfile(id);
 		if(user != null && user.getUserId().equals(userId) && user.getPassword().equals(password)) {
@@ -58,6 +58,12 @@ public class UserProfileController {
 		} else {
 		return false;
 		}
+	}
+	
+	@PutMapping("/user/join")
+	public void putUserProfile(@PathVariable("id") int id, @RequestParam("userId") String userId, @RequestParam("password") String password, 
+	@RequestParam("name") String name, @RequestParam("phone") String phone, @RequestParam("nickName") String nickName) {
+	    mapper.insertUserProfile(id, userId, password, name, phone, nickName);
 	}
 	*/
 }
