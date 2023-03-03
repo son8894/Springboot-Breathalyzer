@@ -24,7 +24,7 @@ public interface UserProfileMapper {
 	int insertUserProfile(@Param("id") int id, @Param("userId") String userId, @Param("password") String password, @Param("name") String name,
 			@Param("phone") String phone, @Param("nickName") String nickName);
 	
-	@Update("UPDATE UserProfile SET userId=#{userId}, password=#{password}, name=#{name}, phone=#{phone}, nickName=#{nickName} WHERE id=#{id})")
+	@Update("UPDATE UserProfile SET userId=#{userId}, password=#{password}, name=#{name}, phone=#{phone}, nickName=#{nickName} WHERE id=#{id}")
 	int updateUserProfile(@Param("id") int id, @Param("userId") String userId, @Param("password") String password, @Param("name") String name,
 			@Param("phone") String phone, @Param("nickName") String nickName);
 	
