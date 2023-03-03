@@ -24,7 +24,7 @@ public class UserProfileController {
 	}
 	
 	@GetMapping("/user/{id}")
-	public UserProfile getUserProfile(@PathVariable("id") String id) {
+	public UserProfile getUserProfile(@PathVariable("id") int id) {
 		return mapper.getUserProfile(id);
 	}
 
@@ -34,19 +34,19 @@ public class UserProfileController {
 	}
 	
 	@PutMapping("/user/{id}")
-	public void putUserProfile(@PathVariable("id") String id, @RequestParam("password") String password, 
+	public void putUserProfile(@PathVariable("id") int id, @RequestParam("userId") String userId, @RequestParam("password") String password, 
 			@RequestParam("name") String name, @RequestParam("phone") String phone, @RequestParam("nickName") String nickName) {
-		mapper.insertUserProfile(id, password, name, phone, nickName);
+		mapper.insertUserProfile(id, userId, password, name, phone, nickName);
 	}
 	
 	@PostMapping("/user/{id}")
-	public void postUserProfile(@PathVariable("id") String id, @RequestParam("password") String password, 
+	public void postUserProfile(@PathVariable("id") int id, @RequestParam("userId") String userId, @RequestParam("password") String password, 
 			@RequestParam("name") String name, @RequestParam("phone") String phone, @RequestParam("nickName") String nickName) {
-		mapper.updateUserProfile(id, password, name, phone, nickName);
+		mapper.updateUserProfile(id, userId, password, name, phone, nickName);
 	}
 	
 	@DeleteMapping("/user/{id}")
-	public void deleteUserProfile(@PathVariable("id") String id) {
+	public void deleteUserProfile(@PathVariable("id") int id) {
 		mapper.deleteUserProfile(id);
 	}
 }
