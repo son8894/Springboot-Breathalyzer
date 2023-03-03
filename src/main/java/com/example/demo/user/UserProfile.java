@@ -1,7 +1,7 @@
 package com.example.demo.user;
 
 public class UserProfile {
-	private String id;
+	private int id;
 	private String userId;
 	private String password;
 	private String name;
@@ -18,7 +18,7 @@ public class UserProfile {
 		this.nickName = nickName;
 	}
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
