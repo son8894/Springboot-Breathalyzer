@@ -35,7 +35,7 @@ public class UserProfileController {
 	
 	@PutMapping("/user/{id}")
 	public void putUserProfile(@PathVariable("id") int id, @RequestParam("userId") String userId, @RequestParam("password") String password, 
-			@RequestParam("name") String name, @RequestParam("phone") String phone, @RequestParam("nickName") String nickName) {
+		@RequestParam("name") String name, @RequestParam("phone") String phone, @RequestParam("nickName") String nickName) {
 		mapper.insertUserProfile(id, userId, password, name, phone, nickName);
 	}
 	
