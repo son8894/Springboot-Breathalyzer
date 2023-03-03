@@ -49,4 +49,15 @@ public class UserProfileController {
 	public void deleteUserProfile(@PathVariable("id") int id) {
 		mapper.deleteUserProfile(id);
 	}
+	/*
+	@PostMapping("/login/{id}")
+	public boolean login(@PathVariable("id") int id, @RequestParam("userId") String userId, @RequestParam("password") String password) {
+	UserProfile user = mapper.getUserProfile(id);
+		if(user != null && user.getUserId().equals(userId) && user.getPassword().equals(password)) {
+		return true;
+		} else {
+		return false;
+		}
+	}
+	*/
 }
