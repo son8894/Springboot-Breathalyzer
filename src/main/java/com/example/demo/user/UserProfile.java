@@ -1,5 +1,9 @@
 package com.example.demo.user;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class UserProfile {
 	private int id;
 	private String userId;
