@@ -28,7 +28,7 @@ public class UserProfile {
 		return userId;
 	}
 	public void setUserId(String userId) {
-		this.id = id;
+		this.userId = userId;
 	}
 	public String getPassword() {
 		return password;
